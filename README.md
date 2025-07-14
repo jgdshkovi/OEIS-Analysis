@@ -2,6 +2,14 @@
 
 This project provides tools for analyzing and visualizing data from the Online Encyclopedia of Integer Sequences (OEIS) using Python and Neo4j graph database.
 
+## Visualizations
+
+The project generates various graph visualizations of the OEIS sequence relationships. Here's an example of the network graph showing connections between sequences:
+
+![OEIS Sequence Network Graph](assets/graph5.png)
+
+*Network visualization showing relationships between OEIS sequences in the Neo4j database*
+
 ## Features
 
 - Web scraping of OEIS sequence pages
@@ -145,6 +153,20 @@ RETURN s1, cr1, s2;
 - **Batch Processing**: Handles multiple specific folders efficiently
 - **Single Folder**: Perfect for testing and development
 - **Recursive Processing**: Processes all available OEIS data
+
+## More Visualizations
+
+The project generates various types of network visualizations to analyze different aspects of OEIS sequence relationships:
+
+### Combined Network Analysis
+![Combined OEIS Network](assets/graph%20combine2.png)
+
+*Combined visualization showing merged network analysis of OEIS sequences with multiple relationship types and clustering patterns*
+
+### High-Connectivity Sequences
+![High Connectivity Graph](assets/graph_gt_80.png)
+
+*Network visualization focusing on highly connected sequences (>80 connections), revealing the most central and influential sequences in the OEIS database*
 
 ## Contributing
 
