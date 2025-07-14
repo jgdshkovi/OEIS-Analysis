@@ -1,0 +1,810 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="OEIS,integer sequences,Sloane" />
+
+    <title>A001000 - OEIS</title>
+    <link
+      rel="search"
+      type="application/opensearchdescription+xml"
+      title="OEIS"
+      href="/oeis.xml"
+    />
+    <script>
+      var myURL = "\/A001000";
+      function redir() {
+        var host = document.location.hostname;
+        if (
+          host != "oeis.org" &&
+          host != "127.0.0.1" &&
+          !/^([0-9.]+)$/.test(host) &&
+          host != "localhost" &&
+          host != "localhost.localdomain"
+        ) {
+          document.location = "https" + ":" + "//" + "oeis" + ".org/" + myURL;
+        }
+      }
+      function sf() {
+        if (document.location.pathname == "/" && document.f)
+          document.f.q.focus();
+      }
+    </script>
+  </head>
+  <body bgcolor="#ffffff" onload="redir();sf()">
+    <div class="loginbar">
+      <div class="login">
+        <a href="/login?redirect=%2fA001000">login</a>
+      </div>
+    </div>
+
+    <div class="center">
+      <div class="top">
+        <center>
+          <div class="donors">
+            The OEIS is supported by
+            <a href="http://oeisf.org/#DONATE"
+              >the many generous donors to the OEIS Foundation</a
+            >.
+          </div>
+
+          <div class="banner">
+            <a href="/"
+              ><img
+                class="banner"
+                border="0"
+                width="600"
+                src="/banner2021.jpg"
+                alt="A001000 - OEIS"
+            /></a>
+          </div>
+        </center>
+      </div>
+    </div>
+
+    <div class="center">
+      <div class="pagebody">
+        <div class="searchbarcenter">
+          <form name="f" action="/search" method="GET">
+            <div class="searchbargreet">
+              <div class="searchbar">
+                <div class="searchq">
+                  <input
+                    class="searchbox"
+                    maxlength="1024"
+                    name="q"
+                    value=""
+                    title="Search Query"
+                  />
+                </div>
+                <div class="searchsubmit">
+                  <input type="submit" value="Search" name="go" />
+                </div>
+                <div class="hints">
+                  <span class="hints"><a href="/hints.html">Hints</a></span>
+                </div>
+              </div>
+              <div class="searchgreet">
+                (Greetings from
+                <a href="/welcome"
+                  >The On-Line Encyclopedia of Integer Sequences</a
+                >!)
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="sequence">
+          <div class="space1"></div>
+          <div class="line"></div>
+
+          <div class="seqhead">
+            <div class="seqnumname">
+              <div class="seqnum">A001000</div>
+              <div class="seqname">
+                a(n) = least m such that if a/b &lt; c/d where a,b,c,d are
+                integers in [0,n], then a/b &lt; k/m &lt; c/d for some integer
+                k.
+              </div>
+            </div>
+            <div class="scorerefs">37</div>
+          </div>
+
+          <div>
+            <div class="seqdatabox">
+              <div class="seqdata">
+                2, 3, 5, 7, 13, 17, 26, 31, 43, 57, 65, 82, 101, 111, 133, 157,
+                183, 197, 226, 257, 290, 307, 343, 381, 421, 463, 485, 530, 577,
+                626, 677, 703, 757, 813, 871, 931, 993, 1025, 1090, 1157, 1226,
+                1297, 1370, 1407, 1483, 1561, 1641, 1723, 1807, 1893, 1937,
+                2026, 2117
+              </div>
+
+              <div class="seqdatalinks">
+                (<a href="/A001000/list">list</a>;
+
+                <a href="/A001000/graph">graph</a>;
+
+                <a href="/search?q=A001000+-id:A001000">refs</a>;
+                <a href="/A001000/listen">listen</a>;
+                <a href="/history?seq=A001000">history</a>;
+
+                <a href="/search?q=id:A001000&fmt=text">text</a>;
+                <a href="/A001000/internal">internal format</a>)
+              </div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="section">
+              <div class="sectname">OFFSET</div>
+              <div class="sectbody">
+                <div class="sectline">1,1</div>
+              </div>
+            </div>
+
+            <div class="section">
+              <div class="sectname">COMMENTS</div>
+              <div class="sectbody">
+                <div class="sectline">
+                  It suffices for (a/b, c/d) to range through the consecutive
+                  pairs of Farey fractions of order n.
+                </div>
+
+                <div class="sectline">
+                  This is the same sequence (apart from the initial term) as
+                  <a
+                    href="/A071111"
+                    title="a(n) is the least integer x such that there exists an integer in the open interval (x/(i+1), x/i) for i= n-1, n-2 ..., 3, 2, 1."
+                    >A071111</a
+                  >. The identity of these two sequences was first proved by
+                  Rustem Aidagulov and a detailed version of the proof can be
+                  found in the Alekseyev link below.
+                </div>
+
+                <div class="sectline">
+                  For sets of real numbers S and T, let S be a divider of T if
+                  some element of S lies strictly between any two distinct
+                  elements of T. Let Fence(n) = {a/n : a in Z}, Recip(n) = {1/b
+                  : 1 &lt;= b &lt;= n} Farey(n) = {a/b : a in Z, 1 &lt;= b &lt;=
+                  n}. Then a(n) is the smallest k such that Fence(k) is a
+                  divider of Recip(n) and also the smallest k such that Fence(k)
+                  is a divider of Farey(n), as shown by S. Rustem Aidagulov. -
+                  <a href="/wiki/User:David_W._Wilson">David W. Wilson</a>, Aug
+                  30 2007
+                </div>
+
+                <div class="sectline">
+                  Suppose that S is a set of 2 or more real numbers. The least m
+                  such that for every r and s in S there is an integer k such
+                  that r &lt; k/m &lt; s is the first separator of S. The least
+                  m such that for every r and s in S there exists an integer k
+                  such that r &lt; k/m &lt; (k+1)/m &lt; s is the second
+                  separator of S, and so on.
+                </div>
+
+                <div class="sectline">...</div>
+
+                <div class="sectline">
+                  For example,
+                  <a
+                    href="/A001000"
+                    title="a(n) = least m such that if a/b &lt; c/d where a,b,c,d are integers in [0,n], then a/b &lt; k/m &lt; c/d for some integer k."
+                    >A001000</a
+                  >
+                  gives first separators for the sets S(n) =
+                  {0,1/2,1/3,...,1/n}. In the following guide, the set S(n)
+                  consists of numbers given by the shown formula for h = 1, 2,
+                  ..., n; F =
+                  <a
+                    href="/A000045"
+                    title="Fibonacci numbers: F(n) = F(n-1) + F(n-2) with F(0) = 0 and F(1) = 1."
+                    >A000045</a
+                  >
+                  (Fibonacci numbers), and r = (1+sqrt(5))/2 (golden ratio).
+                </div>
+
+                <div class="sectline">...</div>
+
+                <div class="sectline">
+                  S(n) ................... 1st separators
+                </div>
+
+                <div class="sectline">
+                  Farey fractions ........
+                  <a
+                    href="/A001000"
+                    title="a(n) = least m such that if a/b &lt; c/d where a,b,c,d are integers in [0,n], then a/b &lt; k/m &lt; c/d for some integer k."
+                    >A001000</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  1/h ....................
+                  <a
+                    href="/A071111"
+                    title="a(n) is the least integer x such that there exists an integer in the open interval (x/(i+1), x/i) for i= n-1, n-2 ..., 3, 2, 1."
+                    >A071111</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  1/(2*h-1) ..............
+                  <a
+                    href="/A024819"
+                    title="a(n) = least m such that if r and s in {1/1, 1/3, 1/5,..., 1/(2n-1)} satisfy r &lt; s, then r &lt; k/m &lt; s for some integer k."
+                    >A024819</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  1/(2*h) ................
+                  <a
+                    href="/A024820"
+                    title="a(n) = least m such that if r and s in {1/2, 1/4, 1/6,..., 1/2n} satisfy r &lt; s, then r &lt; k/m &lt; s for some integer k."
+                    >A024820</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  1/sqrt(h) ..............
+                  <a
+                    href="/A024821"
+                    title="Least m such that if r and s in {1/sqrt(h): h = 1,2,...,n} satisfy r &lt; s, then r &lt; k/m &lt; s for some integer k."
+                    >A024821</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  1/(3*h-2) ..............
+                  <a
+                    href="/A024822"
+                    title="a(n) = least m such that if r and s in {1/1, 1/4, 1/7,..., 1/(3n-2)} satisfy r &lt; s, then r &lt; k/m &lt; s for some integer k."
+                    >A024822</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  1/(3*h-1) ..............
+                  <a
+                    href="/A024823"
+                    title="Least m such that if r and s in {1/2, 1/5, 1/8,..., 1/(3n-1)}, satisfy r &lt; s, then r &lt; k/m &lt; s for some integer k."
+                    >A024823</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  1/(3*h) ................
+                  <a
+                    href="/A024824"
+                    title="a(n) = least m such that if r and s in {1/3, 1/6, 1/9,..., 1/3n} satisfy r &lt; s, then r &lt; k/m &lt; s for some integer k."
+                    >A024824</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  1/(4*h) ................
+                  <a
+                    href="/A024825"
+                    title="a(n) = least m such that if r and s in {1/4, 1/8, 1/12,..., 1/4n} satisfy r &lt; s, then r &lt; k/m &lt; s for some integer k."
+                    >A024825</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  1/C(n+1,2) .............
+                  <a
+                    href="/A024826"
+                    title="Least m such that if r and s in {1/1, 1/3, 1/6,..., 1/C(n+1,2)} satisfy r &lt; s, then r &lt; k/m &lt; s for some integer k."
+                    >A024826</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  1/h^2 ..................
+                  <a
+                    href="/A024827"
+                    title="Least m such that if r and s in {1/1, 1/4, 1/9,..., 1/n^2} satisfy r &lt; s, then r &lt; k/m &lt; s for some integer k."
+                    >A024827</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  h/(1+h^2) ..............
+                  <a
+                    href="/A024828"
+                    title="a(n) = least m such that if r and s in {h/(1 + h^2): h = 1,2,...,n} satisfy r &lt; s, then r &lt; k/m &lt; s for some integer k."
+                    >A024828</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  F(2*h-1)/F(2*h).........
+                  <a
+                    href="/A024829"
+                    title="a(n) = least m such that if r and s in {F(2*h-1)/F(2*h): h = 1,2,...,n} satisfy r &lt; s, then r &lt; k/m &lt; s for some integer k, ..."
+                    >A024829</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  F(2*h)/F(2*h+1) ........
+                  <a
+                    href="/A024830"
+                    title="a(n) = least m such that if r and s in {F(2*h)/F(2*h+1): h = 1,2,...,n} satisfy r &lt; s, then r &lt; k/m &lt; s for some integer k, ..."
+                    >A024830</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  F(2*h+1)/F(2*h+2).......
+                  <a
+                    href="/A024831"
+                    title="a(n) = least m such that if r and s in {F(h)/F(2*h): h = 1,2,...,n} satisfy r &lt; s, then r &lt; k/m &lt; s for some integer k, wher..."
+                    >A024831</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  pi/2 - arctan(h) .......
+                  <a
+                    href="/A024832"
+                    title="Least m such that if r and s in {Pi/2 - atn(h): h = 1,2,...,n} satisfy r &lt; s, then r &lt; k/m &lt; s for some integer k."
+                    >A024832</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  |F(h+1)-r*F(h)| ........
+                  <a
+                    href="/A024849"
+                    title="a(n) = least m such that if r and s in {|F(h+1)-tau*F(h)|: h = 1,2,...,n} satisfy r &lt; s, then r &lt; k/m &lt; s for some integer k..."
+                    >A024849</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  fr. parts, h*sqrt(2) ...
+                  <a
+                    href="/A214921"
+                    title="Least m &gt; 0 such that for every r and s in the set S = {{h*sqrt(2)} : h = 1,..,n} of fractional parts, if r &lt; s, then r &lt; k/..."
+                    >A214921</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  fr. parts, h*r .........
+                  <a
+                    href="/A214964"
+                    title="Least m &gt; 0 such that for every r and s in the set S = {{h*(1+sqrt(5))/2} : h = 1,..,n} of fractional parts, if r &lt; s, then ..."
+                    >A214964</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  fr. parts, h*e .........
+                  <a
+                    href="/A214965"
+                    title="Least m &gt; 0 such that for every r and s in the set S = {{h*e} : h = 1,..,n} of fractional parts, if r &lt; s, then r &lt; k/m &lt; s ..."
+                    >A214965</a
+                  >
+                </div>
+
+                <div class="sectline">...</div>
+
+                <div class="sectline">S(n) ............. 2nd separators</div>
+
+                <div class="sectline">
+                  1/h ..............
+                  <a
+                    href="/A024833"
+                    title="a(n) = least m such that if r and s in {1/1, 1/2, 1/3, ..., 1/n} satisfy r &lt; s, then r &lt; k/m &lt; (k+1)/m &lt; s for some integer k."
+                    >A024833</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  1/(2*h-1) ........
+                  <a
+                    href="/A024834"
+                    title="a(n) = least m such that if r and s in {1/1, 1/3, 1/5, ..., 1/(2n-1)} satisfy r &lt; s, then r &lt; k/m &lt; (k+1)/m &lt; s for some int..."
+                    >A024834</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  1/(2*h) ..........
+                  <a
+                    href="/A024835"
+                    title="a(n) = least m such that if r and s in {1/2, 1/4, 1/6, ..., 1/2n} satisfy r &lt; s, then r &lt; k/m &lt; (k+1)/m &lt; s for some integer k."
+                    >A024835</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  1/(3*h-2) ........
+                  <a
+                    href="/A024836"
+                    title="a(n) = least m such that if r and s in {1/1, 1/4, 1/7, ..., 1/(3n-2)} satisfy r &lt; s, then r &lt; k/m &lt; (k+1)/m &lt; s for some int..."
+                    >A024836</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  1/(3*h-1) ........
+                  <a
+                    href="/A024837"
+                    title="a(n) = least m such that if r and s in {1/2, 1/5, 1/8, ..., 1/(3n-1)} satisfy r &lt; s, then r &lt; k/m &lt; (k+1)/m &lt; s for some int..."
+                    >A024837</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  1/(3*h) ..........
+                  <a
+                    href="/A024838"
+                    title="Least m such that if r and s in {1/3, 1/6, 1/9, ..., 1/3n} satisfy r &lt; s, then r &lt; k/m &lt; (k+1)/m &lt; s for some integer k."
+                    >A024838</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  1/(4*h) ..........
+                  <a
+                    href="/A024839"
+                    title="Least m such that if r and s in {1/4, 1/8, 1/12, ..., 1/4n} satisfy r &lt; s, then r &lt; k/m &lt; (k+1)/m &lt; s for some integer k."
+                    >A024839</a
+                  >
+                </div>
+
+                <div class="sectline">...</div>
+
+                <div class="sectline">S(n) ............. 3rd separators</div>
+
+                <div class="sectline">
+                  1/h ..............
+                  <a
+                    href="/A024840"
+                    title="a(n) = least m such that if r and s in {1/1, 1/2, 1/3, ..., 1/n} satisfy r &lt; s, then r &lt; k/m &lt; (k+2)/m &lt; s for some integer k."
+                    >A024840</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  1/(2*h-1) ........
+                  <a
+                    href="/A024841"
+                    title="a(n) = least m such that if r and s in {1/1, 1/3, 1/5, ..., 1/(2n-1)} satisfy r &lt; s, then r &lt; k/m &lt; (k+2)/m &lt; s for some int..."
+                    >A024841</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  1/(2*h) ..........
+                  <a
+                    href="/A024842"
+                    title="a(n) = least m such that if r and s in {1/2, 1/4, 1/6, ..., 1/2n} satisfy r &lt; s, then r &lt; k/m &lt; (k+2)/m &lt; s for some integer k."
+                    >A024842</a
+                  >
+                </div>
+
+                <div class="sectline">...</div>
+
+                <div class="sectline">S(n) ............. 4th separators</div>
+
+                <div class="sectline">
+                  1/h ..............
+                  <a
+                    href="/A024843"
+                    title="a(n) = least m such that if r and s in {1/1, 1/2, 1/3, ..., 1/n} satisfy r &lt; s, then r &lt; k/m &lt; (k+3)/m &lt; s for some integer k."
+                    >A024843</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  1/(2*h-1) ........
+                  <a
+                    href="/A024844"
+                    title="a(n) = least m such that if r and s in {1/1, 1/3, 1/5, ..., 1/(2n-1)} satisfy r &lt; s, then r &lt; k/m &lt; (k+3)/m &lt; s for some int..."
+                    >A024844</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  1/(2*h) ..........
+                  <a
+                    href="/A024845"
+                    title="a(n) = least m such that if r and s in {1/2, 1/4, 1/6, ..., 1/(2*n)} satisfy r &lt; s, then r &lt; k/m &lt; (k+3)/m &lt; s for some inte..."
+                    >A024845</a
+                  >
+                </div>
+
+                <div class="sectline">...</div>
+
+                <div class="sectline">S(n) ............. 5th separators</div>
+
+                <div class="sectline">
+                  1/h ..............
+                  <a
+                    href="/A024846"
+                    title="a(n) = least m such that if r and s in {1/1, 1/2, 1/3, ..., 1/n} satisfy r &lt; s, then r &lt; k/m &lt; (k+4)/m &lt; s for some integer k."
+                    >A024846</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  1/(2*h-1) ........
+                  <a
+                    href="/A024847"
+                    title="a(n) = least m such that if r and s in {1/1, 1/3, 1/5, ..., 1/(2n-1)} satisfy r &lt; s, then r &lt; k/m &lt; (k+4)/m &lt; s for some int..."
+                    >A024847</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  - <a href="/wiki/User:Clark_Kimberling">Clark Kimberling</a>,
+                  Aug 07 2012
+                </div>
+              </div>
+            </div>
+
+            <div class="section">
+              <div class="sectname">LINKS</div>
+              <div class="sectbody">
+                <div class="sectline">
+                  T. D. Noe,
+                  <a href="/A001000/b001000.txt"
+                    >Table of n, a(n) for n = 1..1000</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  Max Alekseyev,
+                  <a href="/A071111/a071111.txt"
+                    >Proof that A001000 and A071111 are essentially the same
+                    sequence</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="section">
+              <div class="sectname">FORMULA</div>
+              <div class="sectbody">
+                <div class="sectline">
+                  For n &gt;= 2, a(n) = (n-[r])(n-[r+1/2])+1, where r =
+                  sqrt(4n-7), [x] = greatest integer &lt;= x. -
+                  <a href="/wiki/User:David_W._Wilson">David W. Wilson</a>, Aug
+                  30 2007
+                </div>
+              </div>
+            </div>
+
+            <div class="section">
+              <div class="sectname">EXAMPLE</div>
+              <div class="sectbody">
+                <div class="sectline">
+                  The Farey fractions of order 4, 0/1, 1/4, 1/3, 1/2, 2/3, 3/4,
+                  1/1, are separated by the fractions k/7: 0/1 &lt; 1/7 &lt;1/4
+                  &lt; 2/7 &lt; 1/3 &lt; 3/7 &lt; 1/2 &lt; 4/7 &lt; 2/3 &lt;5/7
+                  &lt; 3/4 &lt;6/7 &lt; 1 and 7 is the least m for which at
+                  least one k/m lies strictly between each pair of Farey
+                  fractions.
+                </div>
+              </div>
+            </div>
+
+            <div class="section">
+              <div class="sectname">MATHEMATICA</div>
+              <div class="sectbody">
+                <div class="sectline">
+                  (* The following program generates a northwest corner of an
+                  array in which row k shows the least k-th separator of the set
+                  {1/h : h = 1, 2, ..., n}. *)
+                </div>
+
+                <div class="sectline">
+                  leastSeparatorS[seq_, s_] := Module[{n = 1},
+                </div>
+
+                <div class="sectline">Table[While[Or @@ (n #[[1]] &lt;=</div>
+
+                <div class="sectline">
+                  s + Floor[n #1[[2]]] &amp;) /@ (Sort[#1, Greater] &amp;) /@
+                </div>
+
+                <div class="sectline">
+                  Partition[Take[seq, k], 2, 1], n++]; n, {k, 2, Length[seq]}]];
+                </div>
+
+                <div class="sectline">
+                  TableForm[Map[leastSeparatorS[1/Range[15], #] &amp;,
+                  Range[10]]]
+                </div>
+
+                <div class="sectline">
+                  (*
+                  <a href="/wiki/User:Peter_J._C._Moses">Peter J. C. Moses</a>,
+                  Aug 07 2012 *)
+                </div>
+              </div>
+            </div>
+
+            <div class="section">
+              <div class="sectname">CROSSREFS</div>
+              <div class="sectbody">
+                <div class="sectline">
+                  Cf.
+                  <a
+                    href="/A071111"
+                    title="a(n) is the least integer x such that there exists an integer in the open interval (x/(i+1), x/i) for i= n-1, n-2 ..., 3, 2, 1."
+                    >A071111</a
+                  >.
+                </div>
+
+                <div class="sectline">
+                  Sequence in context:
+                  <a
+                    href="/A069866"
+                    title="Primes in which repeatedly deleting the most significant digit then the least significant digit gives a prime at every step ..."
+                    >A069866</a
+                  >
+                  <a
+                    href="/A125772"
+                    title="Primes not of the form j*T_k +/- 1, where T_k is the k-th triangular number greater than 9."
+                    >A125772</a
+                  >
+                  <a
+                    href="/A233282"
+                    title="Positions of records in partial LCM-products (A233287) of Fibonacci entry points (A001177)."
+                    >A233282</a
+                  >
+                  *
+                  <a
+                    href="/A094947"
+                    title="G.f.: A(x) = Product_{n&gt;=1} 1/(1 - A007947(n)*x^n)^(1/n), where A007947(n) is the product of the distinct prime factors of n."
+                    >A094947</a
+                  >
+                  <a
+                    href="/A231474"
+                    title="Primes whose base-3 representation is also the base-5 representation of a prime."
+                    >A231474</a
+                  >
+                  <a
+                    href="/A092621"
+                    title="Primes with exactly one prime digit."
+                    >A092621</a
+                  >
+                </div>
+
+                <div class="sectline">
+                  Adjacent sequences:
+                  <a href="/A000997" title="From a differential equation."
+                    >A000997</a
+                  >
+                  <a href="/A000998" title="From a differential equation."
+                    >A000998</a
+                  >
+                  <a
+                    href="/A000999"
+                    title="5-adic valuation of binomial(2*n,n): largest k such that 5^k divides binomial(2*n, n)."
+                    >A000999</a
+                  >
+                  *
+                  <a
+                    href="/A001001"
+                    title="Number of sublattices of index n in generic 3-dimensional lattice."
+                    >A001001</a
+                  >
+                  <a
+                    href="/A001002"
+                    title="Number of dissections of a convex (n+2)-gon into triangles and quadrilaterals by nonintersecting diagonals."
+                    >A001002</a
+                  >
+                  <a
+                    href="/A001003"
+                    title="Schroeder's second problem (generalized parentheses); also called super-Catalan numbers or little Schroeder numbers."
+                    >A001003</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="section">
+              <div class="sectname">KEYWORD</div>
+              <div class="sectbody">
+                <div class="sectline">
+                  <span title="a sequence of nonnegative numbers">nonn</span
+                  >,<span title="an exceptionally nice sequence">nice</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="section">
+              <div class="sectname">AUTHOR</div>
+              <div class="sectbody">
+                <div class="sectline">
+                  <a href="/wiki/User:Clark_Kimberling">Clark Kimberling</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="section">
+              <div class="sectname">EXTENSIONS</div>
+              <div class="sectbody">
+                <div class="sectline">
+                  Incompleteness of old definition pointed out by Christopher
+                  Carl Heckman, and revised definition supplied by
+                  <a href="/wiki/User:Clark_Kimberling">Clark Kimberling</a>,
+                  Feb 18 2004
+                </div>
+
+                <div class="sectline">
+                  Definition of separator, guide to related sequences, and
+                  Mathematica program added by
+                  <a href="/wiki/User:Clark_Kimberling">Clark Kimberling</a>,
+                  Aug 07 2012
+                </div>
+              </div>
+            </div>
+
+            <div class="section">
+              <div class="sectname">STATUS</div>
+              <div class="sectbody">
+                <div class="sectline">approved</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="space10"></div>
+        </div>
+      </div>
+    </div>
+
+    <p></p>
+
+    <div class="footerpad"></div>
+    <div class="footer">
+      <center>
+        <div class="bottom">
+          <div class="linksbar">
+            <a href="/">Lookup</a>
+            <a href="/wiki/Welcome"><font color="red">Welcome</font></a>
+            <a href="/wiki/Main_Page"><font color="red">Wiki</font></a>
+            <a href="/wiki/Special:RequestAccount">Register</a>
+
+            <a href="/play.html">Music</a>
+            <a href="/plot2.html">Plot 2</a>
+            <a href="/demo1.html">Demos</a>
+            <a href="/wiki/Index_to_OEIS">Index</a>
+            <a href="/webcam">WebCam</a>
+            <a href="/Submit.html">Contribute</a>
+            <a href="/eishelp2.html">Format</a>
+            <a href="/wiki/Style_Sheet">Style Sheet</a>
+            <a href="/transforms.html">Transforms</a>
+            <a href="/ol.html">Superseeker</a>
+            <a href="/recent">Recents</a>
+          </div>
+          <div class="linksbar">
+            <a href="/community.html">The OEIS Community</a>
+          </div>
+          <div class="linksbar">
+            Maintained by
+            <a href="http://oeisf.org">The OEIS Foundation Inc.</a>
+          </div>
+
+          <div class="dbinfo">
+            Last modified November 4 09:31 EST 2024. Contains 377428 sequences.
+          </div>
+          <div class="legal">
+            <a href="/wiki/Legal_Documents"
+              >License Agreements, Terms of Use, Privacy Policy</a
+            >
+          </div>
+        </div>
+      </center>
+    </div>
+  </body>
+</html>
